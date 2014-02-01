@@ -10,6 +10,8 @@ version          "0.0.4"
 depends          "apt"
 
 recommends       "chocolatey"
+recommends       "homebrew"
 
 supports         "ubuntu"
 supports         "windows"
+supports         "mac_os_x"

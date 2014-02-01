@@ -27,6 +27,15 @@ when "windows"
   chocolatey "opencv" do
     action :upgrade if node['opencv']['upgrade']
   end
+when "mac_os_x"
+  include_recipe "homebrew"
+
+  homebrew_tap 'homebrew/science'
+
+  package "opencv" do
+  	provider Chef::Provider::Package::Homebrew
+  	action :upgrade if node['opencv']['upgrade']
+  end
 else
   package "libopencv-core2.4" do
     action :upgrade if node['opencv']['upgrade']
