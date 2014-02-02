@@ -8,9 +8,9 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.0.4"
 
 depends          "apt"
+depends          "homebrew", :platform => "mac_os_x"
 
 recommends       "chocolatey"
-recommends       "homebrew"
 
 supports         "ubuntu"
 supports         "windows"
